@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>~*~ Jennifer's Official Dawson's Creek Shrine ~*~ Team Pacey 4-Ever ~*~</title>
+<style>
+  /* ===== BODY + TILED FIXED BACKGROUND ===== */
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    color: #4b0082;
+    background-color: #ffc0e0;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="60" height="60"><rect width="60" height="60" fill="%23ffc0e0"/><path d="M15 12 C 11 6, 4 8, 4 16 C 4 22, 15 30, 15 30 C 15 30, 26 22, 26 16 C 26 8, 19 6, 15 12 Z" fill="%23ff1493" opacity="0.6"/><path d="M45 38 C 41 32, 34 34, 34 42 C 34 48, 45 56, 45 56 C 45 56, 56 48, 56 42 C 56 34, 49 32, 45 38 Z" fill="%239400d3" opacity="0.55"/><text x="42" y="20" font-size="11" fill="%23ffd700">★</text><text x="6" y="48" font-size="11" fill="%23ffd700">★</text></svg>');
+    background-attachment: fixed;
+    background-repeat: repeat;
+  }
+
+  /* ===== SCROLLING TOP BANNER ===== */
+  .top-banner {
+    background: linear-gradient(90deg, #ff00ff, #ffff00, #00ffff, #ff00ff, #00ff00, #ff00ff);
+    background-size: 100% 100%;
+    border-top: 4px ridge #ffd700;
+    border-bottom: 4px ridge #ffd700;
+    padding: 10px 0;
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 22px;
+    color: white;
+    text-shadow: 2px 2px 0 #ff1493, -1px -1px 0 #000;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+    letter-spacing: 1px;
+  }
+
+  /* ===== MAIN CONTAINER ===== */
+  .container {
+    max-width: 820px;
+    margin: 24px auto;
+    background: rgba(255, 240, 245, 0.93);
+    border: 6px ridge #ff1493;
+    padding: 24px;
+  }
+
+  h1 {
+    font-family: "Brush Script MT", "Lucida Handwriting", cursive;
+    font-size: 54px;
+    color: #ff1493;
+    text-align: center;
+    text-shadow: 3px 3px 0 #ffd700, 6px 6px 0 #4b0082;
+    margin: 6px 0 0 0;
+    line-height: 1;
+  }
+
+  h2 {
+    font-family: Impact, "Arial Black", sans-serif;
+    font-size: 30px;
+    color: white;
+    background: linear-gradient(90deg, #9400d3, #ff1493, #ff8c00);
+    padding: 10px 18px;
+    border: 4px outset #ffd700;
+    text-shadow: 2px 2px 0 #000;
+    margin-top: 36px;
+    letter-spacing: 1px;
+  }
+
+  p { font-size: 16px; line-height: 1.5; }
+
+  /* ===== BLINKY TEXT ===== */
+  .blink {
+    animation: blink 0.7s steps(1, end) infinite;
+    font-weight: bold;
+    font-size: 30px;
+    color: #ff0000;
+    text-shadow: 2px 2px 0 #ffff00, -2px -2px 0 #00ffff;
+    text-align: center;
+    font-family: Impact, sans-serif;
+    letter-spacing: 2px;
+  }
+  @keyframes blink { 50% { opacity: 0; } }
+
+  .flash-warning {
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background: #000;
+    border: 3px dashed #ff0;
+    padding: 8px;
+    animation: colorflash 0.4s infinite alternate;
+  }
+  @keyframes colorflash {
+    0% { background: #000; color: #ff0; }
+    100% { background: #ff0; color: #f00; }
+  }
+
+  /* ===== RAINBOW HR ===== */
+  .hr-rainbow {
+    height: 8px;
+    background: linear-gradient(90deg, red, orange, yellow, lime, cyan, blue, magenta, red);
+    border: none;
+    border-radius: 4px;
+    margin: 20px 0;
+  }
+
+  /* ===== POLAROIDS (MS PAINT STYLE) ===== */
+  .polaroid-row {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 24px;
+    margin: 28px 0;
+  }
+  .polaroid {
+    background: #ffffff;
+    padding: 14px 14px 12px 14px;
+    border: 2px solid #000;
+    display: inline-block;
+    text-align: center;
+  }
+  .polaroid .photo-area {
+    position: relative;
+    display: inline-block;
+    line-height: 0;
+  }
+  .polaroid img {
+    display: block;
+    width: 230px;
+    height: 300px;
+    object-fit: cover;
+    border: 1px solid #000;
+  }
+  .ms-heart {
+    position: absolute;
+    color: #ff1493;
+    -webkit-text-stroke: 3px #000;
+    text-stroke: 3px #000;
+    font-family: Arial, "Helvetica", sans-serif;
+    font-weight: 900;
+    pointer-events: none;
+    line-height: 1;
+    user-select: none;
+  }
+  .polaroid .caption {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 18px;
+    color: #c71585;
+    margin-top: 10px;
+    font-weight: bold;
+  }
+  .polaroid .sub {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 12px;
+    color: #4b0082;
+    display: block;
+    margin-top: 2px;
+    font-weight: normal;
+  }
+
+  /* "Evidence" photo for the essay */
+  .evidence {
+    text-align: center;
+    margin: 22px auto;
+  }
+  .evidence .photo-area {
+    display: inline-block;
+    position: relative;
+    background: #fff;
+    border: 2px solid #000;
+    padding: 12px 12px 8px 12px;
+    line-height: 0;
+  }
+  .evidence img {
+    display: block;
+    width: 360px;
+    max-width: 100%;
+    height: auto;
+    border: 1px solid #000;
+  }
+  .evidence .stamp {
+    font-family: Impact, sans-serif;
+    color: #c00;
+    font-size: 32px;
+    letter-spacing: 2px;
+    transform: rotate(-8deg);
+    position: absolute;
+    top: 16px; left: 10px;
+    border: 4px solid #c00;
+    padding: 2px 10px;
+    background: rgba(255,255,255,0.5);
+    line-height: 1;
+  }
+  .evidence .caption {
+    font-family: "Comic Sans MS", cursive;
+    font-size: 14px;
+    color: #c71585;
+    margin-top: 8px;
+    line-height: 1.3;
+  }
+
+  /* ===== COMPARE TABLE ===== */
+  .compare {
+    width: 100%;
+    border-collapse: collapse;
+    background: #fffafc;
+    border: 4px ridge #9400d3;
+    margin: 16px 0;
+  }
+  .compare th {
+    background: linear-gradient(90deg, #ff1493, #9400d3);
+    color: white;
+    font-family: Impact, sans-serif;
+    padding: 10px;
+    border: 2px outset #ffd700;
+    font-size: 20px;
+    text-shadow: 2px 2px 0 #000;
+  }
+  .compare td {
+    padding: 10px;
+    border: 1px dashed #9400d3;
+    vertical-align: top;
+    font-size: 14px;
+    line-height: 1.45;
+  }
+  .compare td.dawson { background: #e0f0ff; }
+  .compare td.pacey  { background: #fff3c4; }
+
+  /* ===== AIM BOX ===== */
+  .aim {
+    background: #ffffcc;
+    border: 2px solid #000;
+    padding: 10px;
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+    margin: 16px 0;
+    box-shadow: 3px 3px 0 #888;
+  }
+  .aim b { color: #ff1493; }
+
+  /* ===== UNDER CONSTRUCTION ===== */
+  .under-construction {
+    text-align: center;
+    font-family: Impact, sans-serif;
+    font-size: 22px;
+    color: #000;
+    background: repeating-linear-gradient(45deg, #ffd700, #ffd700 14px, #000 14px, #000 28px);
+    padding: 14px;
+    margin: 22px 0;
+    border: 3px ridge #aaa;
+    text-shadow: 1px 1px 0 #fff, -1px -1px 0 #fff;
+  }
+
+  /* ===== GUESTBOOK ===== */
+  .guestbook {
+    background: #ffe4f1;
+    border: 4px dotted #9400d3;
+    padding: 16px;
+    margin: 20px 0;
+    text-align: center;
+    font-size: 16px;
+  }
+  .gb-btn {
+    display: inline-block;
+    background: linear-gradient(180deg, #ff66cc, #cc0066);
+    color: #fff !important;
+    border: 3px outset #ffd700;
+    padding: 8px 16px;
+    font-family: Impact, sans-serif;
+    font-size: 18px;
+    text-decoration: none !important;
+    text-shadow: 1px 1px 0 #000;
+    margin: 4px;
+  }
+
+  /* ===== WEBRING ===== */
+  .webring {
+    text-align: center;
+    margin: 30px 0;
+    background: #f0f8ff;
+    border: 3px groove #4b0082;
+    padding: 14px;
+  }
+  .button88 {
+    display: inline-block;
+    width: 88px; height: 31px;
+    font-family: "Times New Roman", serif;
+    font-size: 10px;
+    color: #fff;
+    text-align: center;
+    padding: 3px 4px;
+    margin: 4px;
+    vertical-align: middle;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    text-shadow: 1px 1px 0 #000;
+    line-height: 1.05;
+    text-decoration: none;
+  }
+  .b-netscape { background: linear-gradient(180deg,#222,#666); }
+  .b-pacey { background: linear-gradient(180deg,#8B4513,#3b1d05); }
+  .b-creek { background: linear-gradient(180deg,#4682B4,#0c2a4a); }
+  .b-aol   { background: linear-gradient(180deg,#ffcc00,#aa6600); color:#000; text-shadow:none; }
+  .b-tigerbeat { background: linear-gradient(180deg,#ff66cc,#660033); }
+  .b-geocities { background: linear-gradient(180deg,#ff9900,#993300); }
+
+  /* ===== AWARDS ===== */
+  .awards {
+    display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;
+    margin: 16px 0;
+  }
+  .award {
+    background: linear-gradient(180deg,#fff8d5,#ffd700);
+    border: 3px ridge #b8860b;
+    padding: 8px 12px;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-size: 13px;
+    color: #4b0082;
+    max-width: 200px;
+    text-align: center;
+  }
+  .award b { display:block; font-family: "Brush Script MT", cursive; font-size: 18px; color: #c71585; }
+
+  /* ===== SHOUTOUTS ===== */
+  .shoutouts {
+    background: #e0ffff;
+    border: 3px ridge #00ced1;
+    padding: 14px;
+    font-size: 14px;
+    margin: 16px 0;
+  }
+  .shoutouts ul { margin: 6px 0 0 22px; padding: 0; }
+  .shoutouts li { margin: 2px 0; }
+
+  /* ===== QUIZ ===== */
+  .quiz {
+    background: #fffaf0;
+    border: 3px dashed #ff8c00;
+    padding: 14px;
+    font-size: 15px;
+    margin: 16px 0;
+  }
+  .quiz ol { padding-left: 20px; }
+
+  /* ===== COUNTER ===== */
+  .counter-wrap {
+    text-align: center;
+    margin: 40px auto 16px;
+    font-family: "Comic Sans MS", cursive;
+    font-size: 16px;
+    color: #4b0082;
+  }
+  .counter-box {
+    display: inline-block;
+    background: #000;
+    color: #00ff66;
+    font-family: "Courier New", monospace;
+    font-size: 32px;
+    letter-spacing: 6px;
+    padding: 8px 18px;
+    border: 5px ridge silver;
+    margin: 6px auto;
+  }
+
+  /* ===== SPARKLES ===== */
+  .sparkle {
+    display: inline-block;
+    color: #ffd700;
+    animation: sparkle 1.4s infinite alternate;
+    text-shadow: 0 0 6px #fff200;
+  }
+  @keyframes sparkle {
+    0%   { opacity: 0.5; transform: scale(1) rotate(0deg); }
+    100% { opacity: 1;   transform: scale(1.35) rotate(20deg); }
+  }
+
+  /* ===== LINKS ===== */
+  a { color: #0000ee; text-decoration: underline; }
+  a:visited { color: #551a8b; }
+  a:hover { color: #ff1493; background: #ffff66; }
+
+  /* ===== FOOTER ===== */
+  footer {
+    text-align: center;
+    font-size: 12px;
+    color: #4b0082;
+    margin: 30px 0 60px;
+    font-family: "Times New Roman", serif;
+  }
+
+  /* ===== MIDI BAR ===== */
+  .midi {
+    background: #c0c0c0;
+    border: 3px outset #fff;
+    padding: 6px 12px;
+    font-family: "MS Sans Serif", Tahoma, sans-serif;
+    font-size: 13px;
+    color: #000;
+    margin: 16px 0;
+    display: inline-block;
+  }
+  .midi b { color: #000080; }
+  .midi-btn {
+    display: inline-block;
+    background: #c0c0c0;
+    border: 2px outset #fff;
+    padding: 1px 8px;
+    font-family: "MS Sans Serif", sans-serif;
+    font-size: 12px;
+    margin: 0 3px;
+    cursor: pointer;
+  }
+
+  /* ===== NAV PILLS ===== */
+  .nav {
+    text-align: center;
+    margin: 18px 0 8px;
+  }
+  .nav a {
+    display: inline-block;
+    background: linear-gradient(180deg,#ff66cc,#9400d3);
+    color: #fff !important;
+    padding: 6px 14px;
+    margin: 3px;
+    font-family: Impact, sans-serif;
+    text-decoration: none !important;
+    text-shadow: 1px 1px 0 #000;
+    border: 3px outset #ffd700;
+    font-size: 14px;
+  }
+  .nav a:hover { background: linear-gradient(180deg,#ffff00,#ff8c00); color:#000 !important; text-shadow:none; }
+</style>
+</head>
+<body>
+
+<!-- ====== SCROLLING TOP BANNER ====== -->
+<div class="top-banner">
+  <marquee scrollamount="8" behavior="scroll" direction="left">
+    &#9733;*&bull;.&cedil;&#9825;  WeLcOmE tO jEnNiFeR'S oFfIcIaL dAwSoN's CrEeK sHrInE  &#9825;&cedil;.&bull;*&#9733; &nbsp;&nbsp;&nbsp; ~*~ TEAM PACEY 4-EVER ~*~ &nbsp;&nbsp;&nbsp; &#9829; jOeY + pAcEy = TrUe LoVe &#9829; &nbsp;&nbsp;&nbsp; *~* PLZ sign my guestbook!!! *~* &nbsp;&nbsp;&nbsp; NEW PICS ADDED 4/14/02 &#9733; tell ur friends!! &nbsp;&nbsp;&nbsp; &#9829;&#9829;&#9829; I LUV YOU PACEY WITTER &#9829;&#9829;&#9829; &nbsp;&nbsp;&nbsp;
+  </marquee>
+</div>
+
+<div class="container">
+
+  <h1>~*~ Dawson's Creek 4-ever ~*~</h1>
+  <p style="text-align:center; font-family:'Times New Roman', serif; font-style:italic; font-size:16px; margin:6px 0 18px;">
+    "I don't wanna wait for our lives to be over..."<br>
+    <small>&mdash; Paula Cole (the GREATEST song ever made on Earth)</small>
+  </p>
+
+  <div class="nav">
+    <a href="#boyz">My Boyz</a>
+    <a href="#showdown">The Showdown</a>
+    <a href="#essay">My Essay</a>
+    <a href="#quiz">Quiz!!</a>
+    <a href="#guestbook">Guestbook</a>
+    <a href="#shoutouts">Shoutouts</a>
+  </div>
+
+  <hr class="hr-rainbow">
+
+  <div class="blink">&#9733; TEAM PACEY 4-EVER &#9733; TEAM PACEY 4-EVER &#9733;</div>
+
+  <hr class="hr-rainbow">
+
+  <!-- MIDI MUSIC -->
+  <div style="text-align:center;">
+    <div class="midi">
+      &#9835; <b>NOW PLAYING:</b> i_dont_wanna_wait.mid &nbsp;
+      <span class="midi-btn">&#9658; PLAY</span>
+      <span class="midi-btn">&#9632; STOP</span>
+      &nbsp;<i>(turn your speakers UP!!!)</i>
+    </div>
+  </div>
+
+  <!-- INTRO -->
+  <p>
+    hey hey HEY!!!! <span class="sparkle">&#10024;</span> welcome to my page!!! my name is <b>Jennifer</b> (i'm 14 &amp; a half) and this is my shrine to the greatest tv show on planet earth which is <b style="color:#ff1493;">DAWSON'S CREEK</b>!!!! &#9829;&#9829;&#9829;
+  </p>
+  <p>
+    me &amp; my BFF <b>Kayla</b> tape every episode and watch them together every saturday morning while we eat bagel bites &amp; dunkaroos. we have a notebook where we write down all the most romantic quotes and rate them on a scale of 1 to 10 &#9829; (most of them are 10s of course)
+  </p>
+  <p>
+    this site is <u>STILL</u> under construction but i added a TON of new stuff this week so PLZZZ sign my guestbook &amp; tell ur friends!!!! also if you are team dawson plz don't email me hate mail <span class="sparkle">&#10024;</span>
+  </p>
+
+  <div class="under-construction">&#9888; &#9762; UNDER CONSTRUCTION!! WORK IN PROGRESS!! CHECK BACK SOON!!! &#9762; &#9888;</div>
+
+  <!-- AIM SCREEN NAME -->
+  <div class="aim">
+    <b>&#9733; IM ME ON AIM!!! &#9733;</b><br>
+    SN: <b>JoeyPotterLuvr69</b> &nbsp; (no the 69 doesn't mean ANYTHING it's just a number ok!!)<br>
+    <i>away msg:</i> "doin homework w/ kayla brb. luv you pacey &#9829; &#9829; &#9829;"<br>
+    <small>(plz don't IM during 8-9pm on weds, that's NEW EPISODE NITE!!!)</small>
+  </div>
+
+  <!-- ============ THE BOYZ ============ -->
+  <h2 id="boyz">&#9829; My Boyz &#9829;</h2>
+
+  <p>
+    here are the BOYZ of my dreams!!! i printed these pics out at kinkos for $0.25 each and now they are in my locker AND on the inside of my closet door so they are the last thing i see before i go to sleep and the first thing i see when i wake up &#9829;
+  </p>
+
+  <div class="polaroid-row">
+
+    <!-- DAWSON POLAROID -->
+    <div class="polaroid">
+      <div class="photo-area">
+        <img src="pics/dawson.jpeg" alt="Dawson Leery">
+        <span class="ms-heart" style="top:-10px; left:-8px; font-size:38px;">&#9829;</span>
+        <span class="ms-heart" style="top:6px; left:50%; font-size:30px;">&#9829;</span>
+        <span class="ms-heart" style="top:-14px; right:-6px; font-size:42px;">&#9829;</span>
+        <span class="ms-heart" style="top:38%; left:-18px; font-size:34px;">&#9829;</span>
+        <span class="ms-heart" style="top:55%; right:-18px; font-size:30px;">&#9829;</span>
+        <span class="ms-heart" style="bottom:-12px; left:14px; font-size:36px;">&#9829;</span>
+        <span class="ms-heart" style="bottom:-10px; left:50%; font-size:28px;">&#9829;</span>
+        <span class="ms-heart" style="bottom:-14px; right:10px; font-size:40px;">&#9829;</span>
+      </div>
+      <div class="caption">~ Dawson Leery ~
+        <span class="sub">(soooo sensitive... too sensitive maybe???)</span>
+      </div>
+    </div>
+
+    <!-- PACEY POLAROID -->
+    <div class="polaroid">
+      <div class="photo-area">
+        <img src="pics/pacey.png" alt="Pacey Witter">
+        <span class="ms-heart" style="top:-12px; left:-10px; font-size:44px;">&#9829;</span>
+        <span class="ms-heart" style="top:-4px; left:38%; font-size:32px;">&#9829;</span>
+        <span class="ms-heart" style="top:-14px; right:-8px; font-size:40px;">&#9829;</span>
+        <span class="ms-heart" style="top:25%; left:-20px; font-size:36px;">&#9829;</span>
+        <span class="ms-heart" style="top:60%; right:-22px; font-size:38px;">&#9829;</span>
+        <span class="ms-heart" style="top:42%; left:-12px; font-size:26px;">&#9829;</span>
+        <span class="ms-heart" style="bottom:-12px; left:10px; font-size:38px;">&#9829;</span>
+        <span class="ms-heart" style="bottom:-14px; left:48%; font-size:34px;">&#9829;</span>
+        <span class="ms-heart" style="bottom:-10px; right:6px; font-size:42px;">&#9829;</span>
+      </div>
+      <div class="caption">~ Pacey Witter ~
+        <span class="sub">(my future husband &#9829; Mrs. Pacey J. Witter)</span>
+      </div>
+    </div>
+  </div>
+
+  <p style="text-align:center; font-style:italic; color:#9400d3;">
+    *~* i kiss them both goodnight every nite but i kiss pacey LONGER ok don't tell anyone *~*
+  </p>
+
+  <!-- ============ THE SHOWDOWN ============ -->
+  <h2 id="showdown">&#9733; The Ultimate Showdown &#9733; Dawson VS Pacey &#9733;</h2>
+
+  <p>ok ok ok i KNOW this is the question everyone asks me at lunch so i made a chart to settle it once &amp; for all!!!! i was very fair &amp; balanced (mostly).</p>
+
+  <table class="compare">
+    <tr>
+      <th style="width:25%;">&#9733; Category &#9733;</th>
+      <th style="width:37.5%;">Joey + Dawson</th>
+      <th style="width:37.5%;">Joey + Pacey</th>
+    </tr>
+    <tr>
+      <td><b>How It Started</b></td>
+      <td class="dawson">childhood besties since like FOREVER. climbed up the ladder thru her window every nite. they used to sleep in the same bed when they were 8 which is SUPER sweet but also kinda weird now??</td>
+      <td class="pacey">used to HATE each other!!!!! they fought CONSTANTLY!! and then he taught her how to ballroom dance &amp; bought her a wall to paint on?!!?! the most romantic plot ever invented btw</td>
+    </tr>
+    <tr>
+      <td><b>The Big Romantic Moment</b></td>
+      <td class="dawson">they kissed in his bedroom while the steven spielberg posters watched. it was nice. it was fine. they then talked about it for FOUR entire episodes.</td>
+      <td class="pacey">HE BOUGHT HER A BOAT. CALLED. TRUE. LOVE. AND THEY SAILED AWAY FOR THE WHOLE SUMMER. excuse me while i SCREAM into my pillow for the 8000th time</td>
+    </tr>
+    <tr>
+      <td><b>Vibes</b></td>
+      <td class="dawson">cozy. familiar. like a flannel blanket. but also sometimes a flannel blanket is BORING and itches a little.</td>
+      <td class="pacey">BUTTERFLIES!!!! the kind that make you not able to eat your dunkaroos!!!! tension. yearning. i can't breathe i need to lie down</td>
+    </tr>
+    <tr>
+      <td><b>How He Talks to Her</b></td>
+      <td class="dawson">analyzes every feeling for 25 minutes &amp; quotes a movie nobody saw. relates everything back to himself somehow??</td>
+      <td class="pacey">"I remember everything." (THREE. WORDS. that's all it took. three words and i cried for a week)</td>
+    </tr>
+    <tr>
+      <td><b>Hair</b></td>
+      <td class="dawson">ok FINE i will admit it. his hair is kinda dreamy. floppy &amp; golden &amp; soft looking. ugh. moving ON.</td>
+      <td class="pacey">messy in the GOOD way. like he just got off a boat. (probly cuz he just got off a boat.)</td>
+    </tr>
+    <tr>
+      <td><b>Stuff I'm Choosing to Overlook</b></td>
+      <td class="dawson">cries a LOT. (like more than ME and i cry every day). makes everything abt himself. has a shrine to spielberg which is fine but also like... read a book???</td>
+      <td class="pacey">had a weird thing w/ his english teacher in season 1 which we DO NOT TALK ABOUT. also kinda lazy abt school. but he is GROWING ok</td>
+    </tr>
+    <tr>
+      <td><b>Future Husband Material??</b></td>
+      <td class="dawson">he'll definitely move to LA &amp; make documentaries abt his own feelings. joey would have to listen to a director's commentary every night forever. NO THX</td>
+      <td class="pacey">will buy you a boat. will remember your favorite cereal. will fight for you in front of his loser brother. WILL CHOOSE YOU OVER &amp; OVER. swoon swoon swoon</td>
+    </tr>
+    <tr>
+      <td><b>Final Score (out of 10)</b></td>
+      <td class="dawson"><b style="font-size:18px;">5.5 / 10</b><br><i>(only that high cuz of nostalgia)</i></td>
+      <td class="pacey"><b style="font-size:22px; color:#c71585;">11 / 10</b><br><i>(literally not a contest)</i></td>
+    </tr>
+  </table>
+
+  <div class="flash-warning">&#9888; DAWSON FANS LOOK AWAY &#9888; THE FOLLOWING ESSAY MAY HURT YOUR FEELINGS &#9888;</div>
+
+  <!-- ============ THE ESSAY ============ -->
+  <h2 id="essay">&#9998; Why Joey HAS to End Up With Pacey &#9998;</h2>
+
+  <p>
+    look. i love dawson. he was joey's FIRST love and there will always be a place in her heart for the boy who climbed up the ladder. that is, like, science. but loving someone since you were 6 doesn't mean you have to MARRY them, ok??? sometimes the boy next door is JUST the boy next door. sometimes you're supposed to grow UP and find someone who actually CHALLENGES you and doesn't cry every time you have a single original thought.
+  </p>
+
+  <p>
+    pacey LOOKS at joey. like, <i>actually</i> looks at her. dawson looks at joey like she's a character in one of his movies. do you see the difference????? PACEY sees who she IS. he saw her when she was a waitress at the icehouse covered in flour and he was like "yeah that's the one." he didn't need her to be a perfect girl in a sundress sitting on a dock at sunset. he just wanted JOEY. messy stressed-out-about-college joey. JOEY!!!
+  </p>
+
+  <!-- ============ EVIDENCE PHOTO ============ -->
+  <div class="evidence">
+    <div class="photo-area">
+      <img src="pics/joeypacey.webp" alt="Joey and Pacey">
+      <span class="ms-heart" style="top:-12px; left:-12px; font-size:42px;">&#9829;</span>
+      <span class="ms-heart" style="top:-14px; right:-10px; font-size:46px;">&#9829;</span>
+      <span class="ms-heart" style="top:30%; left:-20px; font-size:34px;">&#9829;</span>
+      <span class="ms-heart" style="top:48%; right:-22px; font-size:38px;">&#9829;</span>
+      <span class="ms-heart" style="bottom:-14px; left:18%; font-size:40px;">&#9829;</span>
+      <span class="ms-heart" style="bottom:-12px; right:18%; font-size:36px;">&#9829;</span>
+      <span class="stamp">EXHIBIT A</span>
+    </div>
+    <div class="caption">^^ THE LOOK. that's THE look. case closed your honor &#9829;</div>
+  </div>
+
+  <p>
+    also: pacey bought her a WALL. dawson never bought her ANY wall. not one wall. <span style="color:#ff1493; font-weight:bold;">walls = romance</span>, FACT. (i don't 100% know what that means but i feel it deep in my SOUL.)
+  </p>
+
+  <p>
+    here is the THING about dawson + joey: they are each other's HOME. and that's beautiful!!! that's like... your best friend!!! you should ALWAYS have a dawson in your life. but your dawson shouldn't be your HUSBAND. your husband should be the person who shows up at your door &amp; says "let's go" &amp; the wind blows your hair &amp; you get on a sailboat &amp; sail away from your problems &amp; a sarah mclachlan song starts playing out of NOWHERE. THAT is a husband. that is PACEY.
+  </p>
+
+  <p>
+    in conclusion: joey should pick pacey, then she should pick herself (i read that in a CosmoGirl quiz!!), and then she should call dawson once a year for christmas like a normal person. that's IT. THAT'S the show. <span class="sparkle">&#10024;</span>
+  </p>
+
+  <p style="text-align:center; font-weight:bold; color:#c71585; font-size:18px;">
+    ~*~ THE END (of dawson's chances) ~*~
+  </p>
+
+  <div class="blink" style="font-size:22px;">&#9733; PACEY WITTER 4 PRESIDENT OF MY HEART &#9733;</div>
+
+  <!-- ============ QUIZ ============ -->
+  <h2 id="quiz">&#9733; QUIZ!!! Which Capeside Resident R U??? &#9733;</h2>
+  <div class="quiz">
+    <p><b>answer these &amp; add up your points!!! it's totally scientific i promise</b></p>
+    <ol>
+      <li>ur friend asks you to the movies. you say:
+        <ul>
+          <li>(a) "let's go see the new spielberg again" &mdash; <b>1 pt</b></li>
+          <li>(b) "only if we sneak snacks in from CVS" &mdash; <b>2 pt</b></li>
+          <li>(c) "i can't, i have to work at the icehouse" &mdash; <b>3 pt</b></li>
+          <li>(d) "i'd love to but i'm having an existential crisis" &mdash; <b>4 pt</b></li>
+        </ul>
+      </li>
+      <li>ur fav way to spend a saturday:
+        <ul>
+          <li>(a) editing my home movies &mdash; <b>1 pt</b></li>
+          <li>(b) fixing up a boat for my crush &mdash; <b>2 pt</b></li>
+          <li>(c) painting in my room w/ the door locked &mdash; <b>3 pt</b></li>
+          <li>(d) talking abt my feelings for 9 hours straight &mdash; <b>4 pt</b></li>
+        </ul>
+      </li>
+      <li>ur biggest dream is:
+        <ul>
+          <li>(a) make movies in hollywood &mdash; <b>1 pt</b></li>
+          <li>(b) be happy &amp; have ppl actually believe in me &mdash; <b>2 pt</b></li>
+          <li>(c) go to college somewhere far far away &mdash; <b>3 pt</b></li>
+          <li>(d) be deeply &amp; ironically misunderstood &mdash; <b>4 pt</b></li>
+        </ul>
+      </li>
+    </ol>
+    <p>
+      <b>3-4 pts:</b> you're Dawson!!! a dreamer with great hair &amp; bad timing<br>
+      <b>5-7 pts:</b> you're Pacey!!!! underestimated softie with a heart of GOLD<br>
+      <b>8-10 pts:</b> you're Joey!!!! you are the heroine of your own story bb<br>
+      <b>11-12 pts:</b> you're Jen Lindley &amp; way too cool for capeside tbh
+    </p>
+  </div>
+
+  <!-- ============ AWARDS ============ -->
+  <h2>&#9819; Awards This Site Has Won &#9819;</h2>
+  <div class="awards">
+    <div class="award"><b>&#9733; Best Shrine &#9733;</b>kayla's homepage "kayla's korner" &mdash; 4/2/02</div>
+    <div class="award"><b>&#9733; Cool Site of the Day &#9733;</b>tigerbeatlinks dot tripod dot com &mdash; march '02</div>
+    <div class="award"><b>&#9733; Webmistress in Training &#9733;</b>angelfire teen pages 2002</div>
+    <div class="award"><b>&#9733; Pacey/Joey Approved &#9733;</b>Sailboat Fans ringnet</div>
+    <div class="award"><b>&#9733; Best Use of Marquee &#9733;</b>self-awarded</div>
+  </div>
+
+  <!-- ============ SHOUTOUTS ============ -->
+  <h2 id="shoutouts">&#9733; Shoutouts &#9733;</h2>
+  <div class="shoutouts">
+    <p><b>biggest hugs &amp; xoxo to:</b></p>
+    <ul>
+      <li>&#9829; <b>kayla</b> &mdash; my BFF/AIM buddy/co-VHS-archivist. luv ya forever</li>
+      <li>&#9829; <b>kevin williamson</b> &mdash; for inventing romance, basically</li>
+      <li>&#9829; <b>paula cole</b> &mdash; the woman, the myth, the theme song</li>
+      <li>&#9829; <b>james van der beek</b> &mdash; for being so dreamy on screen even when dawson is having a Moment</li>
+      <li>&#9829; <b>joshua jackson</b> &mdash; for being the absolute BEST and for choosing love</li>
+      <li>&#9829; <b>katie holmes</b> &mdash; for being our queen joey and for having the BEST hair on television</li>
+    </ul>
+  </div>
+
+  <!-- ============ GUESTBOOK ============ -->
+  <h2 id="guestbook">&#9998; Sign My Guestbook!!!! &#9998;</h2>
+  <div class="guestbook">
+    <p>plz plz plz tell me what you think of my page!!!! i read every entry &amp; i will email you back i PROMISE!!!</p>
+    <a class="gb-btn" href="#" onclick="alert('haha jk this is a pretend guestbook!! but if it were real you would write something REALLY nice ♥');return false;">&#9733; SIGN GUESTBOOK &#9733;</a>
+    <a class="gb-btn" href="#" onclick="alert('imaginary guestbook entries from imaginary fans!! 73 total!!');return false;">&#9733; VIEW GUESTBOOK &#9733;</a>
+    <p style="margin-top:14px; font-style:italic;">latest entry: "OMG ur site is SO COOL i love pacey too!!!!" &mdash; Ashleyyy_07 &mdash; 4/12/02</p>
+  </div>
+
+  <!-- ============ WEBRING ============ -->
+  <h2>&#9850; My Webring &#9850;</h2>
+  <div class="webring">
+    <p>i'm part of the <b>~*~ Creeker Circle ~*~</b> webring!!! click the buttons to visit my online friends!!!</p>
+    <a class="button88 b-creek" href="#">&#9733; Capeside<br>WebRing &#9733;</a>
+    <a class="button88 b-pacey" href="#">Pacey<br>fan club</a>
+    <a class="button88 b-tigerbeat" href="#">TigerBeat<br>online fans</a>
+    <a class="button88 b-netscape" href="#">Best Viewed<br>w/ Netscape</a>
+    <a class="button88 b-aol" href="#">AOL<br>4.0 ROCKS</a>
+    <a class="button88 b-geocities" href="#">Get Your<br>Free Page!</a>
+    <p style="margin-top:10px;">
+      &larr; <a href="#">prev</a> | <a href="#">random</a> | <a href="#">next</a> &rarr;
+    </p>
+  </div>
+
+  <!-- ============ EMAIL ============ -->
+  <div style="text-align:center; margin:20px 0;">
+    <p>&#9993; <b>email me!!!!</b> &nbsp; <a href="mailto:JoeyPotterLuvr69@hotmail.com">JoeyPotterLuvr69@hotmail.com</a></p>
+    <p style="font-size:13px; color:#4b0082;"><i>(no chain letters plz unless they are really good ones)</i></p>
+  </div>
+
+  <hr class="hr-rainbow">
+
+  <!-- ============ COUNTER ============ -->
+  <div class="counter-wrap">
+    <p>&#9733; <b>YOU ARE VISITOR #</b> &#9733;</p>
+    <div class="counter-box">0&nbsp;0&nbsp;0&nbsp;8&nbsp;4&nbsp;7</div>
+    <p style="margin-top:8px;"><i>(omg almost 1000!!!! when i hit 1000 i'm adding a whole new page about jen lindley promise!!)</i></p>
+  </div>
+
+  <footer>
+    &copy; 2002 Jennifer's Dawson's Creek Shrine &#9733; all pics belong to the WB plz don't sue me i'm only 14<br>
+    last updated: <b>4/14/2002 @ 9:47pm EST</b> &#9733; best viewed @ 800&times;600 in Netscape Navigator 4.7<br>
+    &#9733; this site is proudly hosted on <b>GeoCities</b> &#9733; made with luv &amp; a LOT of dunkaroos &#9733;
+  </footer>
+
+</div>
+
+</body>
+</html>
